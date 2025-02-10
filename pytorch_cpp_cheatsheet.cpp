@@ -30,10 +30,10 @@ int main(int argc, char const *argv[])
         x = torch::randn({3,2}, opts);          // unit normal distribution 
         x = torch::randint(10, {3,2}, opts);    // random integers (low=0)
         x = torch::randint(3, 10, {3,2}, opts); // random integers in (low,high)
-        // linspace
-        // arange
-        // logspace
-        // randperm
+        // TODO linspace
+        // TODO arange
+        // TODO logspace
+        // TODO randperm
 
         // multiple chained short options
         x = torch::zeros({3,2}, torch::dtype(torch::kFloat64).device(torch::kCPU));
@@ -72,34 +72,41 @@ int main(int argc, char const *argv[])
         static_assert(std::is_same_v<c10::impl::ScalarTypeToCPPType<torch::kFloat32>::type, float>);
         static_assert(std::is_same_v<c10::impl::ScalarTypeToCPPType<torch::kFloat64>::type, double>);
         static_assert(std::is_same_v<c10::impl::ScalarTypeToCPPType<torch::kInt32>::type,   int>);
-        // ...
 
         // map c++ to torch type (Cpp not CPP)
-        static_assert(c10::CppTypeToScalarType<float>::value == torch::kFloat32);
-        // ...
+        static_assert(c10::CppTypeToScalarType<float>::value  == torch::kFloat32);
+        static_assert(c10::CppTypeToScalarType<double>::value == torch::kFloat64);
+        static_assert(c10::CppTypeToScalarType<int>::value    == torch::kInt32);
 
-        std::cout << torch::toString(torch::kFloat32) << std::endl; // print ''
-        const size_t bytes = torch::elementSize(torch::kFloat32);
+        std::cout << torch::toString(torch::kFloat32) << std::endl; // print 'Float'
+        const size_t bytes = torch::elementSize(torch::kFloat32);   // dynamic equivalent to sizeof(float)
         assert(bytes == 4); // 4 bytes = 32 bits
 
         assert(torch::isIntegralType(torch::kFloat32, /*includeBool=*/true) == false);
         assert(torch::isFloatingType(torch::kFloat32) == true);
     }
     //! ==============================================================
-    //! Tensor accessors 
+    //! Tensor (efficient) accessors 
     //! ==============================================================
     {
         //!
-        //! see also [tensor_basics.html](https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements)
-        //!
+        //! See [tensor_basics.html](https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements)
+        //! Type and dimension must be known at compile-time 
         torch::Tensor x = torch::zeros({4,3,2}, torch::kFloat32);
 
         // cpu
         auto accessor = x.accessor<float,3>(); // dim = 3
         accessor[1][2][0] = 3.14f;
 
-        // gpu
-        // TODO
+        // gpu TODO
+    }
+    //! ==============================================================
+    //! Tensor (inefficient) indexing 
+    //! ==============================================================
+    {
+        //! See [tensor_indexing.html](https://pytorch.org/cppdocs/notes/tensor_indexing.html)
+        torch::Tensor x = torch::rand({10,20,30});
+        std::cout << x.index({1, 2, 3}).sizes() << std::endl;
     }
     //! ==============================================================
     //! Tensor memory and device
@@ -130,7 +137,7 @@ int main(int argc, char const *argv[])
         assert(stride2 == 1);
     }
     //! ==============================================================
-    //! Dispatch
+    //! Dispatching
     //! ==============================================================
     {
         torch::Tensor x = torch::rand({3,2}, torch::kFloat32);
@@ -139,7 +146,7 @@ int main(int argc, char const *argv[])
         });
     }
     //! ==============================================================
-    //! From blob
+    //! Tensor creation from raw data
     //! ==============================================================
     {
         int rows = 4;
@@ -157,31 +164,24 @@ int main(int argc, char const *argv[])
         // end of scope prints 'delete!'
     }
     //! ==============================================================
-    //! Indexing
-    //! ==============================================================
-    {
-        //! see [tensor_indexing.html](https://pytorch.org/cppdocs/notes/tensor_indexing.html)
-        torch::Tensor x = torch::rand({10,20,30});
-        std::cout << x.index({1, 2, 3}).sizes() << std::endl;
-    }
+    return 0;
 
     // TODO
 
-    // auto indices = torch::arange({20}, torch::kInt32);
-    // std::cout << "indices = " << indices << std::endl;
+    // TODO auto indices = torch::arange({20}, torch::kInt32);
+    // TODO std::cout << "indices = " << indices << std::endl;
 
-    // std::cout << "____" << std::endl;
-    // auto tmp0 = torch::randperm(10);
-    // std::cout << "tmp0 = " << tmp0 << std::endl;
-    // indices = torch::gather(indices, 0, tmp0);
-    // std::cout << "indices = " << indices << std::endl;
+    // TODO std::cout << "____" << std::endl;
+    // TODO auto tmp0 = torch::randperm(10);
+    // TODO std::cout << "tmp0 = " << tmp0 << std::endl;
+    // TODO indices = torch::gather(indices, 0, tmp0);
+    // TODO std::cout << "indices = " << indices << std::endl;
 
 
-    // std::cout << "____" << std::endl;
-    // auto tmp1 = torch::randperm(5);
-    // std::cout << "tmp1 = " << tmp1 << std::endl;
-    // indices = torch::gather(indices, 0, tmp1);
-    // std::cout << "indices = " << indices << std::endl;
+    // TODO std::cout << "____" << std::endl;
+    // TODO auto tmp1 = torch::randperm(5);
+    // TODO std::cout << "tmp1 = " << tmp1 << std::endl;
+    // TODO indices = torch::gather(indices, 0, tmp1);
+    // TODO std::cout << "indices = " << indices << std::endl;
 
-    return 0;
 }
