@@ -3,8 +3,8 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: Georgia, serif;
-    font-size: 17px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;;
+    font-size: 15px;
     background-color: #fff;
     color: #000;
     margin: 0;
@@ -13,7 +13,7 @@ body {
 
 
 div.document {
-    width: 940px;
+    width: 1200px;
     margin: 30px auto 0 auto;
 }
 
@@ -47,7 +47,7 @@ div.body > .section {
 }
 
 div.footer {
-    width: 940px;
+    width: 1200px;
     margin: 20px auto 30px auto;
     font-size: 14px;
     color: #888;
@@ -107,7 +107,7 @@ div.sphinxsidebarwrapper p.blurb {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: Georgia, serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;;
     color: #444;
     font-size: 24px;
     font-weight: normal;
@@ -151,7 +151,7 @@ div.sphinxsidebar ul li.toctree-l2 > a {
 
 div.sphinxsidebar input {
     border: 1px solid #CCC;
-    font-family: Georgia, serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;;
     font-size: 1em;
 }
 
@@ -182,12 +182,12 @@ div.sphinxsidebar h3.donation {
 /* -- body styles ----------------------------------------------------------- */
 
 a {
-    color: #004B6B;
+    color: #ee4c2c;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #6D4100;
+    color: #F73C16;
     text-decoration: underline;
 }
 
@@ -197,7 +197,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: Georgia, serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
@@ -218,7 +218,7 @@ a.headerlink {
 
 a.headerlink:hover {
     color: #444;
-    background: #EAEAEA;
+    background: #FFFFFF;
 }
 
 div.body p, div.body dd, div.body li {
@@ -228,7 +228,7 @@ div.body p, div.body dd, div.body li {
 div.admonition {
     margin: 20px 0px;
     padding: 10px 30px;
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
@@ -238,7 +238,7 @@ div.admonition tt.xref, div.admonition code.xref, div.admonition a tt {
 }
 
 div.admonition p.admonition-title {
-    font-family: Georgia, serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;;
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
@@ -290,32 +290,32 @@ div.attention {
 }
 
 div.important {
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
 div.note {
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
 div.tip {
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
 div.hint {
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
 div.seealso {
-    background-color: #EEE;
+    background-color: #F8F8F8;
     border: 1px solid #CCC;
 }
 
 div.topic {
-    background-color: #EEE;
+    background-color: #F8F8F8;
 }
 
 p.admonition-title {
@@ -327,7 +327,7 @@ p.admonition-title:after {
 }
 
 pre, tt, code {
-    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;;
     font-size: 0.9em;
 }
 
@@ -350,16 +350,16 @@ tt.descname, code.descname {
 }
 
 img.screenshot {
-    -moz-box-shadow: 2px 2px 4px #EEE;
-    -webkit-box-shadow: 2px 2px 4px #EEE;
-    box-shadow: 2px 2px 4px #EEE;
+    -moz-box-shadow: 2px 2px 4px #F8F8F8;
+    -webkit-box-shadow: 2px 2px 4px #F8F8F8;
+    box-shadow: 2px 2px 4px #F8F8F8;
 }
 
 table.docutils {
     border: 1px solid #888;
-    -moz-box-shadow: 2px 2px 4px #EEE;
-    -webkit-box-shadow: 2px 2px 4px #EEE;
-    box-shadow: 2px 2px 4px #EEE;
+    -moz-box-shadow: 2px 2px 4px #F8F8F8;
+    -webkit-box-shadow: 2px 2px 4px #F8F8F8;
+    box-shadow: 2px 2px 4px #F8F8F8;
 }
 
 table.docutils td, table.docutils th {
@@ -377,7 +377,7 @@ table.field-list, table.footnote {
 table.footnote {
     margin: 15px 0;
     width: 100%;
-    border: 1px solid #EEE;
+    border: 1px solid #F8F8F8;
     background: #FDFDFD;
     font-size: 0.9em;
 }
@@ -439,7 +439,7 @@ ul, ol {
 }
 
 pre {
-    background: #EEE;
+    background: #F8F8F8;
     padding: 7px 30px;
     margin: 15px 0px;
     line-height: 1.3em;
@@ -467,7 +467,7 @@ tt.xref, code.xref, a tt {
 
 a.reference {
     text-decoration: none;
-    border-bottom: 1px dotted #004B6B;
+    border-bottom: 1px dotted #ee4c2c;
 }
 
 /* Don't put an underline on images */
@@ -476,18 +476,18 @@ a.image-reference, a.image-reference:hover {
 }
 
 a.reference:hover {
-    border-bottom: 1px solid #6D4100;
+    border-bottom: 1px solid #F73C16;
 }
 
 a.footnote-reference {
     text-decoration: none;
     font-size: 0.7em;
     vertical-align: top;
-    border-bottom: 1px dotted #004B6B;
+    border-bottom: 1px dotted #ee4c2c;
 }
 
 a.footnote-reference:hover {
-    border-bottom: 1px solid #6D4100;
+    border-bottom: 1px solid #F73C16;
 }
 
 a:hover tt, a:hover code {
@@ -571,7 +571,7 @@ a:hover tt, a:hover code {
         display: block;
         float: none;
         width: 102.5%;
-        margin: 50px -30px -20px -30px;
+        margin: -20px -30px 20px -30px;
         padding: 10px 20px;
         background: #333;
         color: #FFF;
@@ -628,6 +628,12 @@ a:hover tt, a:hover code {
         display: none;
     }
 }
+@media screen and (min-width: 876px) {
+    div.sphinxsidebar {
+        position: fixed;
+        margin-left: 0;
+    }
+}
 
 
 /* misc. */
@@ -663,12 +669,12 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
 }
 
 .related.top {
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #F8F8F8;
     margin-bottom: 20px;
 }
 
 .related.bottom {
-    border-top: 1px solid #EEE;
+    border-top: 1px solid #F8F8F8;
 }
 
 .related ul {

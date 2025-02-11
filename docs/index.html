@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PyTorch C++ Cheatsheet</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=72bcf2f2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=5070d0a7" />
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -20,9 +20,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
 
-    <div class="document">
+
+
+
+
+
+
+
+
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">PyTorch C++ Cheatsheet</a><ul>
+<li><a class="reference internal" href="#tensor-creation">Tensor creation</a></li>
+<li><a class="reference internal" href="#tensor-shape">Tensor shape</a></li>
+<li><a class="reference internal" href="#tensor-data-type">Tensor data type</a></li>
+<li><a class="reference internal" href="#tensor-efficient-accessors">Tensor (efficient) accessors</a></li>
+<li><a class="reference internal" href="#tensor-inefficient-indexing">Tensor (inefficient) indexing</a></li>
+<li><a class="reference internal" href="#tensor-memory-and-device">Tensor memory and device</a></li>
+<li><a class="reference internal" href="#dispatching">Dispatching</a></li>
+<li><a class="reference internal" href="#tensor-creation-from-raw-data">Tensor creation from raw data</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        </div>
+      </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
           
@@ -200,35 +235,10 @@
           
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="#">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">PyTorch C++ Cheatsheet</a><ul>
-<li><a class="reference internal" href="#tensor-creation">Tensor creation</a></li>
-<li><a class="reference internal" href="#tensor-shape">Tensor shape</a></li>
-<li><a class="reference internal" href="#tensor-data-type">Tensor data type</a></li>
-<li><a class="reference internal" href="#tensor-efficient-accessors">Tensor (efficient) accessors</a></li>
-<li><a class="reference internal" href="#tensor-inefficient-indexing">Tensor (inefficient) indexing</a></li>
-<li><a class="reference internal" href="#tensor-memory-and-device">Tensor memory and device</a></li>
-<li><a class="reference internal" href="#dispatching">Dispatching</a></li>
-<li><a class="reference internal" href="#tensor-creation-from-raw-data">Tensor creation from raw data</a></li>
-</ul>
-</li>
-</ul>
-
+    <div class="clearer"></div>
   </div>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
     <div class="footer">
       &copy;2025, Thibault Lejemble.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
       <a href="_sources/index.rst.txt"
