@@ -1,6 +1,8 @@
 PyTorch C++ Cheatsheet
 ======================
 
+.. include:: brief.rst
+
 Tensor creation 
 ----------------
 
