@@ -26,6 +26,23 @@ html_title = '' # empty to not duplicate project name
 html_theme = 'alabaster'
 html_static_path = ['_static']
 html_sidebars = {
-    '**': ['localtoc.html'],
+    '**': ['about.html', 'localtoc.html'],
 }
 html_permalinks_icon = '§'
+html_theme_options = {
+    'fixed_sidebar': 'true',
+    'show_powered_by': 'false',
+    'logo': 'logo.png',
+    'anchor_hover_bg': '#FFFFFF',
+    'gray_2': '#F8F8F8', # Light gray used for code background (default=EEE)
+    'link_hover': '#F73C16',
+    'link': '#ee4c2c', # oragen
+    'pre_bg': '#F8F8F8',
+    'code_font_family': 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;',
+    'font_family': 'Helvetica Neue, Helvetica, Arial, sans-serif;',
+    'head_font_family': 'Helvetica Neue, Helvetica, Arial, sans-serif;',
+    'font_size': '15px', # 17px by default
+    'page_width': '1200px', # 940px by default
+}
+
+pygments_style = 'vs'
