@@ -6,11 +6,8 @@ PyTorch C++ Cheatsheet
 Tensor creation 
 ----------------
 
-
- See also https://pytorch.org/cppdocs/notes/tensor_creation.html
-
- Factory arguments order = `(function-specific, sizes, options)` (except for `torch::full`)
-
+|  See also https://pytorch.org/cppdocs/notes/tensor_creation.html
+|  Factory arguments order = `(function-specific, sizes, options)` (except for `torch::full`)
 
 .. code-block:: cpp
 
@@ -60,11 +57,9 @@ Tensor shape
 Tensor data type
 ----------------
 
-
- Types are constexpr values of enum class type `torch::ScalarType`.
- See the enum class type here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22
- See the different types here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h
-
+|  Types are constexpr values of enum class type `torch::ScalarType`
+|  See the enum class type here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22
+|  See the different types here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h
 
 .. code-block:: cpp
 
@@ -90,10 +85,8 @@ Tensor data type
 Tensor (efficient) accessors 
 -----------------------------
 
-
- See https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements
- Type and dimension must be known at compile-time 
-
+|  See https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements
+|  Type and dimension must be known at compile-time 
 
 .. code-block:: cpp
 
@@ -108,9 +101,7 @@ Tensor (efficient) accessors
 Tensor (inefficient) indexing 
 ------------------------------
 
-
- See https://pytorch.org/cppdocs/notes/tensor_indexing.html
-
+|  See https://pytorch.org/cppdocs/notes/tensor_indexing.html
 
 .. code-block:: cpp
 
@@ -123,9 +114,7 @@ Tensor (inefficient) indexing
 Tensor memory and device
 ------------------------
 
- 
- Row-major order by default
- 
+|  Row-major order by default
 
 .. code-block:: cpp
 

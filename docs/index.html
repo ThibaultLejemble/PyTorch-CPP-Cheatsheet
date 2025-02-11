@@ -35,10 +35,10 @@
 <p>To build and run the C++ executable, checkout the GitHub repository <a class="reference external" href="https://github.com/ThibaultLejemble/PyTorch-CPP-Cheatsheet">here</a>.</p>
 <section id="tensor-creation">
 <h2>Tensor creation<a class="headerlink" href="#tensor-creation" title="Link to this heading">§</a></h2>
-<blockquote>
-<div><p>See also <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_creation.html">https://pytorch.org/cppdocs/notes/tensor_creation.html</a></p>
-<p>Factory arguments order = <cite>(function-specific, sizes, options)</cite> (except for <cite>torch::full</cite>)</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">See also <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_creation.html">https://pytorch.org/cppdocs/notes/tensor_creation.html</a></div>
+<div class="line">Factory arguments order = <cite>(function-specific, sizes, options)</cite> (except for <cite>torch::full</cite>)</div>
+</div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">::</span><span class="n">Tensor</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torch</span><span class="o">::</span><span class="n">TensorOptions</span><span class="p">()</span>
 <span class="w">    </span><span class="p">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">torch</span><span class="o">::</span><span class="n">kFloat32</span><span class="p">)</span><span class="w">     </span><span class="c1">// kUInt8, kInt8, kInt16, kInt32, kInt64, kFloat32, or kFloat64</span>
@@ -85,11 +85,11 @@
 </section>
 <section id="tensor-data-type">
 <h2>Tensor data type<a class="headerlink" href="#tensor-data-type" title="Link to this heading">§</a></h2>
-<blockquote>
-<div><p>Types are constexpr values of enum class type <cite>torch::ScalarType</cite>.
-See the enum class type here: <a class="reference external" href="https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22">https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22</a>
-See the different types here: <a class="reference external" href="https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h">https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h</a></p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Types are constexpr values of enum class type <cite>torch::ScalarType</cite></div>
+<div class="line">See the enum class type here: <a class="reference external" href="https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22">https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22</a></div>
+<div class="line">See the different types here: <a class="reference external" href="https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h">https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h</a></div>
+</div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">::</span><span class="n">ScalarType</span><span class="w"> </span><span class="n">type_float32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torch</span><span class="o">::</span><span class="n">kFloat32</span><span class="p">;</span><span class="w"> </span><span class="c1">// or torch::kF32</span>
 
 <span class="c1">// map torch to c++ type</span>
@@ -113,10 +113,10 @@ See the different types here: <a class="reference external" href="https://github
 </section>
 <section id="tensor-efficient-accessors">
 <h2>Tensor (efficient) accessors<a class="headerlink" href="#tensor-efficient-accessors" title="Link to this heading">§</a></h2>
-<blockquote>
-<div><p>See <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements">https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements</a>
-Type and dimension must be known at compile-time</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">See <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements">https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements</a></div>
+<div class="line">Type and dimension must be known at compile-time</div>
+</div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">::</span><span class="n">Tensor</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torch</span><span class="o">::</span><span class="n">rand</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span>
 
 <span class="c1">// cpu</span>
@@ -128,9 +128,9 @@ Type and dimension must be known at compile-time</p>
 </section>
 <section id="tensor-inefficient-indexing">
 <h2>Tensor (inefficient) indexing<a class="headerlink" href="#tensor-inefficient-indexing" title="Link to this heading">§</a></h2>
-<blockquote>
-<div><p>See <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_indexing.html">https://pytorch.org/cppdocs/notes/tensor_indexing.html</a></p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">See <a class="reference external" href="https://pytorch.org/cppdocs/notes/tensor_indexing.html">https://pytorch.org/cppdocs/notes/tensor_indexing.html</a></div>
+</div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">::</span><span class="n">Tensor</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torch</span><span class="o">::</span><span class="n">rand</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span>
 <span class="n">x</span><span class="p">.</span><span class="n">index</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">})</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14f</span><span class="p">;</span>
 <span class="n">torch</span><span class="o">::</span><span class="n">Tensor</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">index</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">});</span>
@@ -141,9 +141,9 @@ Type and dimension must be known at compile-time</p>
 </section>
 <section id="tensor-memory-and-device">
 <h2>Tensor memory and device<a class="headerlink" href="#tensor-memory-and-device" title="Link to this heading">§</a></h2>
-<blockquote>
-<div><p>Row-major order by default</p>
-</div></blockquote>
+<div class="line-block">
+<div class="line">Row-major order by default</div>
+</div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">torch</span><span class="o">::</span><span class="n">Tensor</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torch</span><span class="o">::</span><span class="n">rand</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span>
 
 <span class="c1">// memory ptr</span>
