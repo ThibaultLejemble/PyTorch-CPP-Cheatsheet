@@ -14,6 +14,8 @@ f = open('source/index.rst', 'w')
 f.write('PyTorch C++ Cheatsheet\n')
 f.write('======================\n')
 f.write('\n')
+f.write('.. include:: brief.rst\n')
+f.write('\n')
 
 for it in content:
     sec_title = it[0]
