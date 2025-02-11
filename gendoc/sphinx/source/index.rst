@@ -6,7 +6,7 @@ PyTorch C++ Cheatsheet
 Tensor creation 
 ----------------
 
-|  See also https://pytorch.org/cppdocs/notes/tensor_creation.html
+|  See also `tensor_creation.html <https://pytorch.org/cppdocs/notes/tensor_creation.html>`_
 |  Factory arguments order = `(function-specific, sizes, options)` (except for `torch::full`)
 
 .. code-block:: cpp
@@ -58,8 +58,8 @@ Tensor data type
 ----------------
 
 |  Types are constexpr values of enum class type `torch::ScalarType`
-|  See the enum class type here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22
-|  See the different types here: https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h
+|  See the enum class type here: `ScalarType.h <https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/c10/core/ScalarType.h#L151C12-L151C22>`_
+|  See the different types here: `types.h <https://github.com/pytorch/pytorch/blob/69301fb10eb3f7fd49af5c681a2e386af115baba/torch/csrc/api/include/torch/types.h>`_
 
 .. code-block:: cpp
 
@@ -85,7 +85,7 @@ Tensor data type
 Tensor (efficient) accessors 
 -----------------------------
 
-|  See https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements
+|  See also `tensor_basics.html <https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements>`_
 |  Type and dimension must be known at compile-time 
 
 .. code-block:: cpp
@@ -101,7 +101,7 @@ Tensor (efficient) accessors
 Tensor (inefficient) indexing 
 ------------------------------
 
-|  See https://pytorch.org/cppdocs/notes/tensor_indexing.html
+|  See also `tensor_indexing.html <https://pytorch.org/cppdocs/notes/tensor_indexing.html>`_
 
 .. code-block:: cpp
 
