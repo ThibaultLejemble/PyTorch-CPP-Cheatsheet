@@ -91,7 +91,7 @@ int main(int argc, char const *argv[])
     //! ==============================================================
     {
         //!
-        //! See https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements
+        //! See also https://pytorch.org/cppdocs/notes/tensor_basics.html#efficient-access-to-tensor-elements
         //! Type and dimension must be known at compile-time 
         //!
         torch::Tensor x = torch::rand({3, 4, 5});
@@ -108,7 +108,7 @@ int main(int argc, char const *argv[])
     //! ==============================================================
     {
         //!
-        //! See https://pytorch.org/cppdocs/notes/tensor_indexing.html
+        //! See also https://pytorch.org/cppdocs/notes/tensor_indexing.html
         //!
         torch::Tensor x = torch::rand({3, 4, 5});
         x.index({1, 2, 0}) = 3.14f;
