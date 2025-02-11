@@ -1,10 +1,12 @@
 # PyTorch C++ Cheatsheet
 
-![logo](https://github.com/ThibaultLejemble/PyTorch-CPP-Cheatsheet/blob/d4e5360f53145e24d53d706c8aded8b46a203674/docs/_static/logo.png)
+<img src="https://github.com/ThibaultLejemble/PyTorch-CPP-Cheatsheet/blob/d4e5360f53145e24d53d706c8aded8b46a203674/docs/_static/logo.png" align="left" width="200px"/>
 
 A unique C++ file showing how to use the [PyTorch C++ API](https://pytorch.org/cppdocs) : [`pytorch_cpp_cheatsheet.cpp`](https://github.com/ThibaultLejemble/PyTorch-CPP-Cheatsheet/blob/main/pytorch_cpp_cheatsheet.cpp).
 
 Checkout the HTML version [here](https://thibaultlejemble.github.io/PyTorch-CPP-Cheatsheet/index.html).
+
+<br clear="left"/>
 
 ## Build and run the C++ executable
 
