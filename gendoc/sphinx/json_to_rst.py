@@ -29,9 +29,15 @@ for it in content:
     for type_str,lines in sec_content:
         if type_str == 'code':
             f.write('.. code-block:: cpp\n\n')
-        for l in lines:
-            if type_str == 'code':
+            for l in lines:
                 f.write('    ')
-            f.write(l)
-            f.write('\n')
+                f.write(l)
+                f.write('\n')
+        else:
+            assert lines[0].replace(' ', '') == ''
+            assert lines[-1].replace(' ', '') == ''
+            for l in lines[1:-1]:
+                f.write('| ')
+                f.write(l)
+                f.write('\n')
         f.write('\n')

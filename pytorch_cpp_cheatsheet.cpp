@@ -10,7 +10,6 @@ int main(int argc, char const *argv[])
     {
         //!
         //! See also https://pytorch.org/cppdocs/notes/tensor_creation.html
-        //!
         //! Factory arguments order = `(function-specific, sizes, options)` (except for `torch::full`)
         //!
         torch::Tensor x;
